@@ -3,10 +3,23 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
 
-class PokespiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class PokespiderItem(Item):
+    card_series = Field()
+
+    card_name = Field()
+
+    card_type = Field()
+
+    low_price = Field()
+    
+    high_price = Field()
+
+    market_price = Field()
+
+    median_price = Field()
+
+    
+
