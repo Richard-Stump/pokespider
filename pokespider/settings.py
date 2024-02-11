@@ -7,6 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+
+import sys
+import asyncio
+
 BOT_NAME = "pokespider"
 
 SPIDER_MODULES = ["pokespider.spiders"]
@@ -17,21 +21,23 @@ NEWSPIDER_MODULE = "pokespider.spiders"
 #USER_AGENT = "pokespider (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 64
+CONCURRENT_REQUESTS = 1
+CONCURRENT_ITEMS = 1
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#`DOWNLOAD_`DELAY = 3
+RANDOMIZE_DOWNLOAD_DELAY = True
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -53,6 +59,9 @@ CONCURRENT_REQUESTS = 64
 #DOWNLOADER_MIDDLEWARES = {
 #    "pokespider.middlewares.PokespiderDownloaderMiddleware": 543,
 #}
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy_selenium.SeleniumMiddleware': 800
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -62,9 +71,9 @@ CONCURRENT_REQUESTS = 64
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "pokespider.pipelines.PokespiderPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "pokespider.pipelines.PokespiderPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -92,9 +101,21 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
-DOWNLOAD_HANDLERS = {
-    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-}
+# DOWNLOAD_HANDLERS = {
+#     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+#     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+# }
+
+SELENIUM_DRIVER_NAME = 'firefox'
+SELENIUM_DRIVER_EXECUTABLE_PATH = '.\geckodriver.exe'
+SELENIUM_DRIVER_ARGUMENTS = [
+    '-headless'
+]
 
 LOG_LEVEL = 'INFO'
+
+# PLAYWRIGHT_BROWSER_TYPE = "firefox"
+# PLAYWRIGHT_LAUNCH_OPTIONS = {
+#     "headless": False,
+#     "timeout":  60 * 1000,     # 60 seconds
+# }

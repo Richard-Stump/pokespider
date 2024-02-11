@@ -1,0 +1,483 @@
+1707360981352	geckodriver	INFO	Listening on 127.0.0.1:64731
+1707361154042	geckodriver	INFO	Listening on 127.0.0.1:64774
+1707361181374	geckodriver	INFO	Listening on 127.0.0.1:64791
+1707361384691	geckodriver	INFO	Listening on 127.0.0.1:64846
+1707361465857	geckodriver	INFO	Listening on 127.0.0.1:64997
+1707361673886	geckodriver	INFO	Listening on 127.0.0.1:65160
+1707361725585	geckodriver	INFO	Listening on 127.0.0.1:65258
+1707444215593	geckodriver	INFO	Listening on 127.0.0.1:57400
+1707444218640	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileffGpxt"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707444219058	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707444219130	Marionette	INFO	Listening on port 57410
+Read port: 57410
+1707444219354	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+1707444220374	Marionette	INFO	Stopped listening on port 57410
+Dynamically enable window occlusion 1
+1707444362469	geckodriver	INFO	Listening on 127.0.0.1:57454
+1707444365521	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileTxqebu"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707444365870	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707444365925	Marionette	INFO	Listening on port 57464
+Read port: 57464
+1707444366053	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707444369546	Marionette	INFO	Stopped listening on port 57464
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+n@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:15880
+re@https://js-agent.newrelic.com/nr-spa-1.249.0.min.js:2:78639
+2782/y.finish@https://js-agent.newrelic.com/nr-spa-1.249.0.min.js:2:66079
+2782/y.checkFinish/e.finishTimer</e.finishTimer<@https://js-agent.newrelic.com/nr-spa-1.249.0.min.js:2:65652
+
+Dynamically enable window occlusion 1
+1707444409079	geckodriver	INFO	Listening on 127.0.0.1:57581
+1707444412119	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileYXCs3f"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707444412468	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707444412521	Marionette	INFO	Listening on port 57591
+Read port: 57591
+1707444412646	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707444417197	Marionette	INFO	Stopped listening on port 57591
+Dynamically enable window occlusion 1
+1707444477224	geckodriver	INFO	Listening on 127.0.0.1:57701
+1707444480253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofile0EMsrh"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707444480588	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707444480642	Marionette	INFO	Listening on port 57711
+Read port: 57711
+1707444480793	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707444483571	Marionette	INFO	Stopped listening on port 57711
+Dynamically enable window occlusion 1
+1707444906450	geckodriver	INFO	Listening on 127.0.0.1:57816
+1707444909518	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileey8uxn"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707444909847	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707444909898	Marionette	INFO	Listening on port 57826
+Read port: 57826
+1707444910039	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707444913026	Marionette	INFO	Stopped listening on port 57826
+Dynamically enable window occlusion 1
+1707445341868	geckodriver	INFO	Listening on 127.0.0.1:57961
+1707445344926	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileAKboUQ"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707445345263	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707445345314	Marionette	INFO	Listening on port 57971
+Read port: 57971
+1707445345454	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707445349853	Marionette	INFO	Stopped listening on port 57971
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707445482532	geckodriver	INFO	Listening on 127.0.0.1:58082
+1707445485594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofilezVU1ri"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707445485923	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707445485973	Marionette	INFO	Listening on port 58094
+Read port: 58094
+1707445486110	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707445499672	Marionette	INFO	Stopped listening on port 58094
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707445524472	geckodriver	INFO	Listening on 127.0.0.1:58205
+1707445527479	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileE1qrrc"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707445527888	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707445527944	Marionette	INFO	Listening on port 58215
+Read port: 58215
+1707445528143	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707445559257	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707445666752	geckodriver	INFO	Listening on 127.0.0.1:58365
+1707445669801	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofiletc7aov"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707445670140	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707445670195	Marionette	INFO	Listening on port 58375
+Read port: 58375
+1707445670341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707445684378	Marionette	INFO	Stopped listening on port 58375
+JavaScript warning: https://cdn-pci.optimizely.com/js/15795180511.js, line 27: Script terminated by timeout at:
+callbackFn/<@https://cdn-pci.optimizely.com/js/15795180511.js:27:21
+3189/t.A/</i<@https://cdn-pci.optimizely.com/js/15795180511.js:2:63437
+2233/s/<@https://cdn-pci.optimizely.com/js/15795180511.js:2:62791
+6993/</ft@https://cdn-pci.optimizely.com/js/15795180511.js:2:31894
+lt@https://cdn-pci.optimizely.com/js/15795180511.js:2:31952
+6993/</ut<@https://cdn-pci.optimizely.com/js/15795180511.js:2:31445
+Gt@https://cdn-pci.optimizely.com/js/15795180511.js:2:37244
+s@https://cdn-pci.optimizely.com/js/15795180511.js:2:62756
+u@https://cdn-pci.optimizely.com/js/15795180511.js:2:36117
+7543/t.setInterval/<@https://cdn-pci.optimizely.com/js/15795180511.js:2:136744
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19395
+
+Dynamically enable window occlusion 1
+1707446217384	geckodriver	INFO	Listening on 127.0.0.1:58622
+1707446220434	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileAEvMvw"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707446220788	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707446220844	Marionette	INFO	Listening on port 58632
+Read port: 58632
+1707446221007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707446224706	Marionette	INFO	Stopped listening on port 58632
+Dynamically enable window occlusion 1
+1707446325605	geckodriver	INFO	Listening on 127.0.0.1:58748
+1707446328617	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileEmJaBu"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707446328963	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707446329018	Marionette	INFO	Listening on port 58760
+Read port: 58760
+1707446329153	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707446340827	Marionette	INFO	Stopped listening on port 58760
+Dynamically enable window occlusion 1
+1707448090605	geckodriver	INFO	Listening on 127.0.0.1:59471
+1707448093651	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileIune04"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707448093984	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707448094038	Marionette	INFO	Listening on port 59481
+Read port: 59481
+1707448094180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707448097956	Marionette	INFO	Stopped listening on port 59481
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707448136990	geckodriver	INFO	Listening on 127.0.0.1:59605
+1707448140028	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileIrNQ8J"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707448140367	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707448140420	Marionette	INFO	Listening on port 59615
+Read port: 59615
+1707448140563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707448144491	Marionette	INFO	Stopped listening on port 59615
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707448226347	geckodriver	INFO	Listening on 127.0.0.1:59760
+1707448229353	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileadmZ1K"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707448229753	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707448229819	Marionette	INFO	Listening on port 59770
+Read port: 59770
+1707448229997	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707448234504	Marionette	INFO	Stopped listening on port 59770
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707577917612	geckodriver	INFO	Listening on 127.0.0.1:57807
+1707577920648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofilemS7PkG"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707577921117	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707577921180	Marionette	INFO	Listening on port 57817
+Read port: 57817
+1707577921401	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707577927069	Marionette	INFO	Stopped listening on port 57817
+Dynamically enable window occlusion 1
+1707578586075	geckodriver	INFO	Listening on 127.0.0.1:58429
+1707578589113	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileCMSnD1"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707578589534	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707578589588	Marionette	INFO	Listening on port 58440
+Read port: 58440
+1707578589800	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/app.bb01aa6b.js, line 1: TypeError: e.response is undefined
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/192.1e024a6e.js, line 1: TypeError: this.countryCodes is null
+1707578775107	geckodriver	INFO	Listening on 127.0.0.1:58659
+1707578778159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofilekVhsgv"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707578778496	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707578778588	Marionette	INFO	Listening on port 58669
+Read port: 58669
+1707578778853	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/192.1e024a6e.js, line 1: TypeError: this.countryCodes is null
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+1707578857484	geckodriver	INFO	Listening on 127.0.0.1:58836
+1707578860487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileP8Rudp"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707578860893	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707578860963	Marionette	INFO	Listening on port 58847
+Read port: 58847
+1707578861157	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+1707578890981	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/app.bb01aa6b.js, line 1: ChunkLoadError: Loading chunk 608 failed.
+(error: https://www.tcgplayer.com/js/608.f1416d74.js)
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/app.bb01aa6b.js, line 1: TypeError: e.response is undefined
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: https://www.tcgplayer.com/js/chunk-vendors.8b7c4812.js, line 31: Error: Request aborted
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://www.tcgplayer.com/js/app.bb01aa6b.js, line 1: TypeError: e.response is undefined
+1707578921583	Marionette	INFO	Stopped listening on port 58847
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=2&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=2&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
+1707582270369	geckodriver	INFO	Listening on 127.0.0.1:53438
+1707582273374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofiler47bPp"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707582273774	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707582273831	Marionette	INFO	Listening on port 53450
+Read port: 53450
+1707582274010	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707582279983	Marionette	INFO	Stopped listening on port 53450
+Dynamically enable window occlusion 1
+1707582913200	geckodriver	INFO	Listening on 127.0.0.1:54208
+1707582916211	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofile5IN4lH"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707582916551	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707582916600	Marionette	INFO	Listening on port 54218
+Read port: 54218
+1707582916745	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707582922316	Marionette	INFO	Stopped listening on port 54218
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19237
+
+Dynamically enable window occlusion 1
+1707666342487	geckodriver	INFO	Listening on 127.0.0.1:56991
+1707666345520	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless=new" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileyg5JR4"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707666345997	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-headless"
+1707666346099	Marionette	INFO	Listening on port 57008
+Read port: 57008
+1707666346332	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707666353182	Marionette	INFO	Stopped listening on port 57008
+JavaScript warning: https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection, line 7: Script terminated by timeout at:
+nrWrapper@https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection:7:19195
+
+Dynamically enable window occlusion 1
