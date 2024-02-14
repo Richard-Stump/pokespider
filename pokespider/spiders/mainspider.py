@@ -5,11 +5,35 @@ from scrapy import Spider, Request, Selector
 
 from pokespider.items import PokespiderItem
 
-
-from scrapy.utils.response import get_base_url
 from scrapy_selenium import SeleniumRequest
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
+
+def all_of(
+    *expected_conditions
+):
+    """An expectation that all of multiple expected conditions is true.
+
+    Equivalent to a logical 'AND'.
+    Returns: When any ExpectedCondition is not met: False.
+    When all ExpectedConditions are met: A List with each ExpectedCondition's return value.
+    """
+
+    def all_of_condition(driver):
+        results = []
+        for expected_condition in expected_conditions:
+            try:
+                result = expected_condition(driver)
+                if not result:
+                    return False
+                results.append(result)
+            except WebDriverException:
+                return False
+        return results
+
+    return all_of_condition
+
 
 class MainSpider(Spider):
     """The main spider for scraping """
@@ -60,21 +84,20 @@ class MainSpider(Spider):
                 #     PageMethod("wait_for_selector", ".tcg-pagination__pages", timeout=10000)
                 # ]    
             #}
-            
-            conditions = [
+
+            condition = all_of(
                 EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "section.product-details")),
                 EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-breadcrumbs-item")),
                 EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".price-points")),
                 EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-pagination__pages")),
-            ]
+            )
 
             yield SeleniumRequest(
                 url = self.get_absolute_url(response, url),
                 callback = self.parse_card_details_page,
                 wait_time = 50,
-                wait_until = EC.all_of(conditions)
+                wait_until = condition
             )
-
         # Get the next page to search, and follow to it.
         next_page_url = response.xpath('.//a[@aria-label="Next page"]/@href').get()
         # meta = {
@@ -84,14 +107,14 @@ class MainSpider(Spider):
         #     ]            
         # }
         #yield response.follow(next_page_url, callback=self.parse, meta=meta)
+
+        condition = EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div.search-result__content a"))
+
         yield SeleniumRequest(
             url = self.get_absolute_url(response, next_page_url),
             callback = self.parse_card_details_page,
             wait_time = 50,
-            wait_until = EC.visibility_of_all_elements_located((
-                By.CSS_SELECTOR,
-                "div.search-result__content a"
-            ))
+            wait_until = condition
         )
 
     async def parse_card_details_page(self, response):
@@ -133,15 +156,17 @@ class MainSpider(Spider):
         #}
 
         #yield response.follow(url, meta=meta, callback=self.parse_card_details_page_last)
+
+        condition = all_of(
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div#app")),
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".listing-item__price")),
+        )
+
         yield SeleniumRequest(
             url = self.get_absolute_url(response, url),
             callback = self.parse_card_details_page_last,
             wait_time = 50,
-            wait_until = EC.visibility_of_all_elements_located((
-                By.CSS_SELECTOR,
-                "div#app",
-                ".listing-item__price",
-            )),
+            wait_until = condition,
             meta = {
                 "wip_item": wip_item,
             }
@@ -166,3 +191,4 @@ class MainSpider(Spider):
         new_url = response.urljoin(url)
         print(f"\n\nOriginal Url: {url}\nNew Url:    {new_url}")
         return new_url
+    
