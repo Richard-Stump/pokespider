@@ -34,7 +34,6 @@ def all_of(
 
     return all_of_condition
 
-
 class MainSpider(Spider):
     """The main spider for scraping """
 
@@ -48,19 +47,9 @@ class MainSpider(Spider):
         """
 
         url = "https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common|Uncommon|Promo|Rare|Ultra+Rare|Holo+Rare|Secret+Rare|Amazing+Rare|Rare+Ace|Radiant+Rare|Hyper+Rare|Rare+BREAK|Prism+Rare|Special+Illustration+Rare|Unconfirmed|Double+Rare|Illustration+Rare|Shiny+Holo+Rare|Classic+Collection"
+        
+        yield self.request_search_page(url)
 
-        # meta = {
-        #     "playwright":               True,
-        #     "playwright_page_methods":  [
-        #         PageMethod("wait_for_selector", "div.search-result__content a", timeout=60000),
-        #     ]            
-        # }
-
-        yield SeleniumRequest(
-            url = url,
-            wait_time = 10,
-            wait_until = EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div.search-result__content a"))
-        )
 
     async def parse(self, response):
         """Parses through the main requests that scrapy starts with, 
@@ -74,48 +63,15 @@ class MainSpider(Spider):
 
         for url in card_details_links:
             print(f"Following url: {url}")
-            #meta = {
-                # "playwright":               True,
-                # "playwright_page_methods":  [
-                #     PageMethod("wait_for_selector", "div#app"),
-                #     PageMethod("wait_for_selector", "section.product-details", timeout=10000),
-                #     PageMethod("wait_for_selector", ".tcg-breadcrumbs-item", timeout=10000),
-                #     PageMethod("wait_for_selector", ".price-points", timeout=10000),
-                #     PageMethod("wait_for_selector", ".tcg-pagination__pages", timeout=10000)
-                # ]    
-            #}
 
-            condition = all_of(
-                EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "section.product-details")),
-                EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-breadcrumbs-item")),
-                EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".price-points")),
-                EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-pagination__pages")),
-            )
+            return self.request_first_details_page(response, url)
 
-            yield SeleniumRequest(
-                url = self.get_absolute_url(response, url),
-                callback = self.parse_card_details_page,
-                wait_time = 50,
-                wait_until = condition
-            )
+            
+
         # Get the next page to search, and follow to it.
         next_page_url = response.xpath('.//a[@aria-label="Next page"]/@href').get()
-        # meta = {
-        #     "playwright":               True,
-        #     "playwright_page_methods":  [
-        #         PageMethod("wait_for_selector", "div.search-result__content a", timeout=60000),
-        #     ]            
-        # }
-        #yield response.follow(next_page_url, callback=self.parse, meta=meta)
 
-        condition = EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div.search-result__content a"))
-
-        yield SeleniumRequest(
-            url = self.get_absolute_url(response, next_page_url),
-            callback = self.parse_card_details_page,
-            wait_time = 50,
-            wait_until = condition
-        )
+        #yield self.request_search_page(next_page_url, response)
 
     async def parse_card_details_page(self, response):
         print("\n\nProcessing Details Page: First")
@@ -126,10 +82,10 @@ class MainSpider(Spider):
         card_rarity = response.css(".product__item-details__attributes li:nth-child(0) div span::text").get()
         price_points = response.css(".price-points table tr td span.price::text").getall()
         market_price = price_points[0]
-        median_price = price_points[4]
+        median_price = price_points[1]
 
-        print(f"{market_price}")
-        print(f"{median_price}")
+        print(f"market: '{market_price}'")
+        print(f"merdian: '{median_price}'")
 
         low_price = response.css(".listing-item__price:nth-child(1)::text").get()
 
@@ -146,31 +102,8 @@ class MainSpider(Spider):
         # Navigate to the last page to get the high price
         url = response.css('.tcg-pagination__pages a:last-child::attr(href)').get()
         print(f"\n\nFollowing {url}\n\n")
-       # meta = {
-            # "playwright":               True,
-            # "playwright_page_methods":  [
-            #     PageMethod("wait_for_selector", "div#app", timeout=10000),
-            #     PageMethod("wait_for_selector", ".listing-item__price", timeout=10000),
-            # ],
-            #"wip_item": wip_item
-        #}
 
-        #yield response.follow(url, meta=meta, callback=self.parse_card_details_page_last)
-
-        condition = all_of(
-            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div#app")),
-            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".listing-item__price")),
-        )
-
-        yield SeleniumRequest(
-            url = self.get_absolute_url(response, url),
-            callback = self.parse_card_details_page_last,
-            wait_time = 50,
-            wait_until = condition,
-            meta = {
-                "wip_item": wip_item,
-            }
-        )
+        yield self.request_last_details_page(response, url, wip_item)
     
     async def parse_card_details_page_last(self, response):
         print("\n\nProcessing Details Page: Last")
@@ -188,7 +121,49 @@ class MainSpider(Spider):
         return item
 
     def get_absolute_url(self, response, url):
+        if response is None:
+            return url
+
         new_url = response.urljoin(url)
         print(f"\n\nOriginal Url: {url}\nNew Url:    {new_url}")
         return new_url
-    
+
+    def request_search_page(self, url, response = None):
+        return SeleniumRequest(
+            url = self.get_absolute_url(response, url),
+            wait_time = 10,
+            wait_until = EC.visibility_of_all_elements_located(
+                (By.CSS_SELECTOR, "div.search-result__content a")
+            )
+        )
+
+    def request_first_details_page(self, response, url):
+        condition = all_of(
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "section.product-details")),
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-breadcrumbs-item")),
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".price-points")),
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".tcg-pagination__pages")),
+        )
+
+        return SeleniumRequest(
+            url = self.get_absolute_url(response, url),
+            callback = self.parse_card_details_page,
+            wait_time = 50,
+            wait_until = condition
+        )
+
+    def request_last_details_page(self, response, url, wip_item):
+        condition = all_of(
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "div#app")),
+            EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".listing-item__price")),
+        )
+
+        return SeleniumRequest(
+            url = self.get_absolute_url(response, url),
+            callback = self.parse_card_details_page_last,
+            wait_time = 50,
+            wait_until = condition,
+            meta = {
+                "wip_item": wip_item,
+            }
+        )

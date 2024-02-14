@@ -827,3 +827,167 @@ n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2Nn
 w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
 tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
 
+1707880207885	geckodriver	INFO	Listening on 127.0.0.1:59209
+1707880349417	geckodriver	INFO	Listening on 127.0.0.1:59285
+1707880352436	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileqgBSxT"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707880352938	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707880353047	Marionette	INFO	Listening on port 59295
+Read port: 59295
+1707880353346	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707880598184	geckodriver	INFO	Listening on 127.0.0.1:59573
+1707880601206	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofilextRwyc"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707880601868	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707880601944	Marionette	INFO	Listening on port 59583
+Read port: 59583
+1707880602156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707880629772	geckodriver	INFO	Listening on 127.0.0.1:59705
+1707880632790	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileA3cMPj"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707880633245	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707880633310	Marionette	INFO	Listening on port 59715
+Read port: 59715
+1707880633531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707880644325	Marionette	INFO	Stopped listening on port 59715
+JavaScript warning: https://www.tcgplayer.com/js/126.6a4f4045.js, line 20: Script terminated by timeout at:
+clear@https://www.tcgplayer.com/js/126.6a4f4045.js:20:68183
+draw@https://www.tcgplayer.com/js/126.6a4f4045.js:20:73919
+71403/_update/<@https://www.tcgplayer.com/js/126.6a4f4045.js:20:664
+_update@https://www.tcgplayer.com/js/126.6a4f4045.js:20:443
+71403/_refresh/this._request<@https://www.tcgplayer.com/js/126.6a4f4045.js:20:336
+
+Dynamically enable window occlusion 1
+1707880716027	geckodriver	INFO	Listening on 127.0.0.1:59893
+1707880719028	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileSth5Kg"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707880719543	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707880719604	Marionette	INFO	Listening on port 59903
+Read port: 59903
+1707880719824	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707880732146	Marionette	INFO	Stopped listening on port 59903
+JavaScript warning: https://d14jnfavjicsbe.cloudfront.net/client.js, line 2: Script terminated by timeout at:
+t@https://d14jnfavjicsbe.cloudfront.net/client.js:2:67853
+@https://d14jnfavjicsbe.cloudfront.net/client.js:2:67854
+@https://d14jnfavjicsbe.cloudfront.net/client.js:2:87582
+@https://d14jnfavjicsbe.cloudfront.net/client.js:2:87585
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+tn@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:80839
+i@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:82712
+
+Dynamically enable window occlusion 1
+1707880856313	geckodriver	INFO	Listening on 127.0.0.1:60066
+1707880859316	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\stump\\AppData\\Local\\Temp\\rust_mozprofileuAl44T"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707880859706	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707880859760	Marionette	INFO	Listening on port 60080
+Read port: 60080
+1707880859927	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+JavaScript warning: https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false, line 3: Script terminated by timeout at:
+n.try@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:77787
+w@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:120316
+tr/<@https://www.paypal.com/sdk/js?client-id=AQ870EQjXMcuVuaHdN3Rmb8OmsgF-yY2NnBdHtQCqiGNz2-7phDM0TVNZmbfDt9mRHlE68OCgQqVNeBg&components=messages,buttons&currency=USD&intent=capture&commit=false:3:121412
+
+1707880868547	Marionette	INFO	Stopped listening on port 60080
+JavaScript warning: https://www.tcgplayer.com/product/534442/pokemon-sv-paldean-fates-iono-080-091?xid=pia9ccd99e-a8c3-4476-af94-f14080d8f052&page=56&Language=English, line 7: Script terminated by timeout at:
+emit@https://www.tcgplayer.com/product/534442/pokemon-sv-paldean-fates-iono-080-091?xid=pia9ccd99e-a8c3-4476-af94-f14080d8f052&page=56&Language=English:7:10300
+i@https://www.tcgplayer.com/product/534442/pokemon-sv-paldean-fates-iono-080-091?xid=pia9ccd99e-a8c3-4476-af94-f14080d8f052&page=56&Language=English:7:19575
+nrWrapper@https://www.tcgplayer.com/product/534442/pokemon-sv-paldean-fates-iono-080-091?xid=pia9ccd99e-a8c3-4476-af94-f14080d8f052&page=56&Language=English:7:19344
+
+Dynamically enable window occlusion 1
