@@ -1,5 +1,2 @@
-scrapy>=2.11.0
-scrapy-selenium>=0.0.7
-selenium >= 3.0.0, < 4.0.0
-
-urllib3 >= 1.26.15, < 2
+scrapy >= 2.11.0
+playwright >= 1.15

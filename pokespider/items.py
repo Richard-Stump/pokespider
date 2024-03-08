@@ -7,19 +7,32 @@ from scrapy import Item, Field
 
 
 class PokespiderItem(Item):
-    card_series = Field()
+    card_order  = Field(name = "Number")
 
-    card_name = Field()
+    card_series = Field(name = "Series")
 
-    card_type = Field()
+    card_name = Field(name = "Name")
 
-    low_price = Field()
+    card_rarity = Field(name = "Rarity")
+
+    low_price = Field(name = "Low Price")
     
-    high_price = Field()
+    high_price = Field(name = "High Price")
 
-    market_price = Field()
+    market_price = Field(name = "Market Price")
 
-    median_price = Field()
+    median_price = Field(name = "Median Price")  
 
-    
+    foil_low_price = Field(name = "Foil Low Price")
 
+    foil_market_price = Field(name = "Foil Market Price")
+
+    foil_median_price = Field(name = "Foil Median Price")
+
+    has_foils = Field(name = "Has Fields")
+
+    has_normals = Field(name = "Has Normals")
+
+    first_url = Field(name = "Url")
+
+    error_encountered = Field(name = "Errors")

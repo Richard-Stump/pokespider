@@ -27,7 +27,22 @@ class PokespiderPipeline:
                 os.makedirs("./out/", exist_ok=True)
 
             csv_file = open(f"./out/{series}.csv", "wb")
-            exporter = CsvItemExporter(csv_file)
+            exporter = CsvItemExporter(csv_file, export_empty_fields = True)
+            exporter.fields_to_export = {
+                "card_order":           "Card Number",
+                "card_name":            "Card Name",
+                "has_normals":          "Norms",
+                "low_price":            "Low Price",
+                "high_price":           "High Price",
+                "market_price":         "Normal Market Price",
+                "median_price":         "Normal Median Price",
+                "low_price_foils":      "Foil Low Price",
+                "foil_market_price":    "Foil Market Price",
+                "foil_median_price":    "Foil Median Price",
+                "first_url":            "URL",
+                "errors_encountered":   "Errors"
+            }
+
             exporter.start_exporting()
 
             self.series_to_exporter[series] = (exporter, csv_file)
@@ -35,8 +50,23 @@ class PokespiderPipeline:
         return self.series_to_exporter[series]
 
     def process_item(self, item, spider):
-        exporter, _ = self.get_exporter(item)
-        item['card_series'] = None
+        print(f"\n\n\n\n\n\n PROCESSING ITEM!!!!!!")
+        
+        print(f"    url    = {item['first_url']}")
+        print(f"    order  = {item['card_order']}")
+        print(f"    series = {item['card_series']}")
+        print(f"    name   = {item['card_name']}")
+        print(f"    rarity = {item['card_rarity']}")
+        print(f"    low    = {item['low_price']}")
+        print(f"    high   = {item['high_price']}")
+        print(f"    market = {item['market_price']}")
+        print(f"    median = {item['median_price']}")
+        print(f"    f_mark = {item['foil_market_price']}")
+        print(f"    f_medi = {item['foil_median_price']}")
+
+        exporter, csv_file = self.get_exporter(item)
         exporter.export_item(item)
+
+        csv_file.flush()
 
         return item
