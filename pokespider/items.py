@@ -36,3 +36,18 @@ class PokespiderItem(Item):
     first_url = Field(name = "Url")
 
     error_encountered = Field(name = "Errors")
+
+
+    def print_indented(self):
+        print(f"    first_url:          {self['card_series']}")
+        print(f"    card_number:        {self['card_order']}")
+        print(f"    card_series:        {self['card_series']}")
+        print(f"    card_rarity:        {self['card_rarity']}")
+        print(f"    card_name:          {self['card_name']}")
+        print(f"    low_price:          {self['low_price']}")
+        print(f"    high_price:         {self['high_price']}")
+        print(f"    market_price:       {self['market_price']}")
+        print(f"    median_price:       {self['median_price']}")
+        print(f"    has_foils:          {self['has_foils']}")
+        print(f"    has_normals:        {self['has_normals']}")
+        print(f"    error_encountered:  {self['error_encountered']}")

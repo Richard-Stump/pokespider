@@ -32,63 +32,59 @@ from scrapy import Spider, Request, Selector
 
 from pokespider.items import PokespiderItem
 
-import time
+from scrapy_playwright.page import PageMethod
 
-from scrapy_selenium import SeleniumRequest
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.support import expected_conditions as EC
+import wx
+import wx.lib.scrolledpanel
 
-# This is defined here because scrapy-selenium does not provide bindings for
-# EC.all_of() >_>
-#
-# I love dealing with libraries that haven't been updated in 4 years. 
-def all_of(
-    *expected_conditions
-):
-    """An expectation that all of multiple expected conditions is true.
+class SelectionWindow:
+    id_base = 1000
 
-    Equivalent to a logical 'AND'.
-    Returns: When any ExpectedCondition is not met: False.
-    When all ExpectedConditions are met: A List with each ExpectedCondition's return value.
-    """
+    def __init__(self, set_names = None, grid_width = 4):
+        self.app = wx.App()
+        self.window = wx.Frame(None, title="Select your sets")
 
-    def all_of_condition(driver):
-        results = []
-        for expected_condition in expected_conditions:
-            try:
-                result = expected_condition(driver)
-                if not result:
-                    return False
-                results.append(result)
-            except WebDriverException:
-                return False
-        return results
+        self.panel = wx.lib.scrolledpanel.ScrolledPanel(self.window)
+        self.grid_sizer = wx.GridSizer(grid_width)
 
-    return all_of_condition
+        self.selection_dict = {}
 
-# This is defined here because scrapy-selenium does not provide bindings for
-# EC.any_of() >_>
-#
-# I love dealing with libraries that haven't been updated in 4 years. 
-def any_of(*expected_conditions):
-    """An expectation that any of multiple expected conditions is true.
+        for index, set_name in enumerate(set_names):
+            id = self.id_base + index
+            checkbox = wx.CheckBox(self.panel, id=id, label=set_name)
+            checkbox.Bind(wx.EVT_CHECKBOX, self.select_item, checkbox)
 
-    Equivalent to a logical 'OR'. Returns results of the first matching
-    condition, or False if none do.
-    """
+            self.selection_dict[id] = [set_name, False]
 
-    def any_of_condition(driver):
-        for expected_condition in expected_conditions:
-            try:
-                result = expected_condition(driver)
-                if result:
-                    return result
-            except WebDriverException:
-                pass
-        return False
+            self.grid_sizer.Add(checkbox)
 
-    return any_of_condition
+        self.panel.SetSizer(self.grid_sizer)
+        self.panel.SetupScrolling()
+
+        self.window.Layout()
+        
+        self.window.Show()
+        self.app.MainLoop()
+
+    def select_item(self, event):   
+        checkbox = event.GetEventObject()
+        checkbox_id = checkbox.GetId()   
+        checked = checkbox.IsChecked()
+        print(f"SELECTING ITEM: id={checkbox_id}, checked={checked}")  
+        
+        self.selection_dict[checkbox_id][1] = checked
+
+    def get_selection(self):
+        selection_list = []
+
+        for id, value in self.selection_dict.items():
+            set_name, selected = value
+            if selected:    
+                selection_list.append(set_name)
+
+        return selection_list
+
+
 
 class NewSpider(Spider):
     """The main spider for scraping """
@@ -102,15 +98,57 @@ class NewSpider(Spider):
         """Returns a list of requests that scrapy will process for the start of the spider. 
         """
 
-        url = "https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common|Uncommon|Promo|Rare|Ultra+Rare|Holo+Rare|Secret+Rare|Amazing+Rare|Rare+Ace|Radiant+Rare|Hyper+Rare|Rare+BREAK|Prism+Rare|Special+Illustration+Rare|Unconfirmed|Double+Rare|Illustration+Rare|Shiny+Holo+Rare|Classic+Collection"
-        #url = "https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=18&view=grid&RarityName=Common%7CUncommon%7CPromo%7CRare%7CUltra+Rare%7CHolo+Rare%7CSecret+Rare%7CAmazing+Rare%7CRare+Ace%7CRadiant+Rare%7CHyper+Rare%7CRare+BREAK%7CPrism+Rare%7CSpecial+Illustration+Rare%7CUnconfirmed%7CDouble+Rare%7CIllustration+Rare%7CShiny+Holo+Rare%7CClassic+Collection"
+        #url = "https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid&RarityName=Common|Uncommon|Promo|Rare|Ultra+Rare|Holo+Rare|Secret+Rare|Amazing+Rare|Rare+Ace|Radiant+Rare|Hyper+Rare|Rare+BREAK|Prism+Rare|Special+Illustration+Rare|Unconfirmed|Double+Rare|Illustration+Rare|Shiny+Holo+Rare|Classic+Collection"
+        #url = "https://www.tcgplayer.com/search/pokemon/base-set?productLineName=pokemon&page=1&view=grid&setName=base-set"
 
-        yield self.request_search_page(url)
+        url = "https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page=1&view=grid"
+        
+        yield self.request_set_selector(url)
+
+        #yield self.request_search_page(url)
+
+    def get_set_selection(self, set_names):
+        
+        window = SelectionWindow(set_names, 4)
+
+        selected_items =  window.get_selection()
+
+        print("\n\n Selected Items:")
+        print(selected_items)
+        print("\n\n")
+
+        return None
+
 
     #===========================================================================
     # Page Parsing Methods
     #===========================================================================
         
+    def set_name_to_url_param(self, set_name):
+        working_str = set_name.replace(":", "")
+        working_str = working_str.replace("'", "")
+        working_str = working_str.replace(" - ", " ")
+        working_str = working_str.replace("&", "and")
+        working_str = working_str.lower()
+        working_str = working_str.replace(" ", "-")
+        url_param = f"setName={working_str}"
+        
+        return url_param
+
+    def parse_set_selector(self, response):
+        set_names = response.css("[data-testid=searchFilterSet] * .tcg-input-checkbox__label-text::text").getall()
+
+        selected_sets = self.get_set_selection(set_names)
+        
+        root_url = response.url
+
+        for set_name in selected_sets:
+            url_param = self.set_name_to_url_param(set_name)
+
+            url = f"{root_url}&{url_param}"
+
+            yield self.request_search_page(url, response)
+
     def parse_search_page(self, response):
         print("GOT SEARCH PAGE!!!!!!!")
 
@@ -124,8 +162,6 @@ class NewSpider(Spider):
             item['first_url'] = self.get_absolute_url(url, response)
             print("\n\n\nRETURNINGNONE\n\n\n\n\n")
             yield self.request_first_details_page(url, response, item)
-
-            #return None
 
         next_page_url = response.xpath('.//a[@aria-label="Next page"]/@href').get()
 
@@ -143,7 +179,12 @@ class NewSpider(Spider):
         rarity_spans = selector.css(".search-result__rarity span")
         print(f"    rarity_spans: {rarity_spans}")
 
-        card_rarity = rarity_spans[0].css("span::text").get()
+        card_rarity = None
+
+        # If this card doesn't have a rarity associated with it. Skip it because it's a
+        # pack of some sort we don't care about
+        if len(rarity_spans) > 0:
+            card_rarity = rarity_spans[0].css("span::text").get()
 
         card_number = None
 
@@ -194,32 +235,46 @@ class NewSpider(Spider):
     def parse_first_details_page(self, response):
         item = response.meta['wip_item']
 
-        print(f"\n\n\ PARSING FIRST DETAILS PAGE For: {item['first_url']}")
-        yield item
-        return None
+        print(f"\n\n PARSING FIRST DETAILS PAGE For: {item['first_url']}")
         
-        if response.css(".no-result").get() is not None:
-            print(f"    Returning due to no results")
-            yield item
-            return None
-
+        print(f"    Fetching normal/holo prices")
         headers = response.css(".price-points__header__price *::text").getall()
-        if headers is not None and len(headers) > 0:
-            print(f"    Fetching normal/holo prices")
 
-            headers = [h.strip() for h in headers]
-            has_normal_prices = "Normal" in headers
-            has_foil_prices = "Foil" in headers
+        headers = [h.strip() for h in headers]
+        has_normal_prices = "Normal" in headers
+        has_foil_prices = "Foil" in headers
 
-            item['has_normals'] = 'X' if has_normal_prices else None
-            item['has_foils'] = 'X' if has_foil_prices else None
+        item['has_normals'] = 'X' if has_normal_prices else None
+        item['has_foils'] = 'X' if has_foil_prices else None
 
-            if (not has_normal_prices) and has_foil_prices:
-                item['foil_low_price'] = item['market_price']
-                item['foil_market_price'] = item['market_price']
-                item['low_price'] = None,
-                item['market_price'] = None
+        if (not has_normal_prices) and has_foil_prices:
+            item['foil_low_price'] = item['market_price']
+            item['foil_market_price'] = item['market_price']
+            item['low_price'] = None,
+            item['market_price'] = None
+
+        elif has_normal_prices and has_foil_prices:
+            prices = response.css(".price-points .price::text").getall()
+
+            item['market_price'] = prices[0]
+            item['foil_market_price'] = prices[1]
+            item['median_price'] = prices[4]
+            item['foil_median_price'] = prices[5]
+
+        next_url = response.css('.tcg-pagination__pages a::attr(href)').getall()[-1]
+        print(f"\n\n DONE PARSING FIRST DETAILS PAGE")
+
+        yield self.request_last_details_page(next_url, response, item)
+
+    def parse_last_details_page(self, response):
+        item = response.meta['wip_item']
+
+        print(f"\n\n  PARSING LAST DETAILS PAGE")
         
+        listing_prices = response.css(".listing-item__price::text").getall();
+        
+        item['high_price'] = listing_prices[-1]
+
         yield item
 
     def error_callback(self, failure):
@@ -262,24 +317,35 @@ class NewSpider(Spider):
         print(f"\n\nOriginal Url: {url}\nNew Url:    {new_url}")
         return new_url
     
-    def request_search_page(self, url, response = None, meta = None):
-    
-        # This sleep exists to prevent memory issues with the selenium web
-        # driver. Without this, the browser doesn't have enough time to clean
-        # up memory in between requests. 
-        time.sleep(0.5)
-
+    def request_set_selector(self, url, response = None, meta = None):
         if meta is None:
             meta = {}
 
-        return SeleniumRequest(
+        meta['playwright'] = True
+        meta['playwright_page_methods'] = [
+            PageMethod("wait_for_selector", "[data-testid=searchFilterSet]")
+        ]
+        
+        return Request(
+            url = self.get_absolute_url(url, response),
+            callback = self.parse_set_selector,
+            errback = self.error_callback,
+            meta = meta
+        )
+
+    def request_search_page(self, url, response = None, meta = None):
+        if meta is None:
+            meta = {}
+
+        meta['playwright'] = True
+        meta['playwright_page_methods'] = [
+            PageMethod("wait_for_selector", ".search-results")
+        ]
+
+        return Request(
             url = self.get_absolute_url(url, response),
             callback = self.parse_search_page,
             errback = self.error_callback,
-            wait_time = 60,
-            wait_until = EC.visibility_of_all_elements_located(
-                (By.CSS_SELECTOR, "section.search-results")
-            ),
             meta = meta
         )
     
@@ -289,30 +355,36 @@ class NewSpider(Spider):
             meta = {}
 
         meta['wip_item'] = item
-    
-        condition = any_of(
-            #EC.visibility_of_all_elements_located(
-            #    (By.CSS_SELECTOR, "body")
-            #)
-            #EC.visibility_of_all_elements_located(
-            #     (By.CSS_SELECTOR, ".price-guide")
-            #),
-             #EC.visibility_of_all_elements_located(
-             #    (By.CSS_SELECTOR, ".listing-item")
-             #),
-             #EC.visibility_of_all_elements_located(
-             #    (By.CSS_SELECTOR, ".no-result")
-             #)
-            EC.visibility_of_all_elements_located(
-                (By.CSS_SELECTOR, "#app")
-            )
-        )
 
-        return SeleniumRequest(
+        meta['playwright'] = True
+        meta['playwright_page_methods'] = [
+            PageMethod("wait_for_selector", ".price-points"),
+            PageMethod("wait_for_selector", ".tcg-pagination__pages")
+        ]
+
+        return Request(
             url = self.get_absolute_url(url, response),
             callback = self.parse_first_details_page,
             errback = self.error_callback,
-            wait_time = 60,
-            wait_until = condition,
             meta = meta,
         )
+    
+    def request_last_details_page(self, url, response, item, meta = None):
+        if meta is None:
+            meta = {}
+
+        meta['wip_item'] = item
+
+        meta['playwright'] = True
+        meta['playwright_page_methods'] = [
+            PageMethod("wait_for_selector", ".price-points"),
+        ]
+        
+        return Request(
+            url = self.get_absolute_url(url, response),
+            callback = self.parse_last_details_page,
+            errback = self.error_callback,
+            meta = meta,
+        )
+
+        

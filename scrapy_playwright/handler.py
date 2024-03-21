@@ -1,3 +1,4 @@
+import sys
 import asyncio
 import logging
 from contextlib import suppress
@@ -12,7 +13,6 @@ from playwright.async_api import (
     Download,
     Error as PlaywrightError,
     Page,
-    Playwright as AsyncPlaywright,
     PlaywrightContextManager,
     Request as PlaywrightRequest,
     Response as PlaywrightResponse,
@@ -25,7 +25,7 @@ from scrapy.http import Request, Response
 from scrapy.http.headers import Headers
 from scrapy.responsetypes import responsetypes
 from scrapy.settings import Settings
-from scrapy.utils.defer import deferred_from_coro
+from scrapy.utils.defer import deferred_from_coro as deferred_from_coro_default
 from scrapy.utils.misc import load_object
 from scrapy.utils.reactor import verify_installed_reactor
 from twisted.internet.defer import Deferred, inlineCallbacks
@@ -40,15 +40,48 @@ from scrapy_playwright._utils import (
     _maybe_await,
 )
 
+# Supporting for Windows
+if sys.platform == "win32" and sys.version_info >= (3, 8):
+    import threading
 
-__all__ = ["ScrapyPlaywrightDownloadHandler"]
+    class Var:
+        windows_loop = None
+        windows_thread = None
 
+    def windows_get_asyncio_event_loop():
+        if Var.windows_thread is None:
+            if Var.windows_loop is None:
+                Var.windows_loop = asyncio.WindowsProactorEventLoopPolicy().new_event_loop()
+                asyncio.set_event_loop(Var.windows_loop)
+            if not Var.windows_loop.is_running():
+                Var.windows_thread = threading.Thread(
+                    target=Var.windows_loop.run_forever, daemon=True
+                )
+                Var.windows_thread.start()
+        return Var.windows_loop
+
+    async def windows_get_result(o):
+        return asyncio.run_coroutine_threadsafe(o, windows_get_asyncio_event_loop()).result()
+
+    def deferred_from_coro(o):
+        if isinstance(o, Deferred):
+            return o
+        return deferred_from_coro_default(windows_get_result(o))
+
+else:
+    windows_get_asyncio_event_loop = None
+    windows_get_result = None
+    deferred_from_coro = deferred_from_coro_default
+
+__all__ = [
+    "ScrapyPlaywrightDownloadHandler",
+    "windows_get_asyncio_event_loop",
+    "windows_get_result",
+]
 
 PlaywrightHandler = TypeVar("PlaywrightHandler", bound="ScrapyPlaywrightDownloadHandler")
 
-
 logger = logging.getLogger("scrapy-playwright")
-
 
 DEFAULT_BROWSER_TYPE = "chromium"
 DEFAULT_CONTEXT_NAME = "default"
@@ -96,9 +129,6 @@ class Config:
 
 
 class ScrapyPlaywrightDownloadHandler(HTTPDownloadHandler):
-    playwright_context_manager: Optional[PlaywrightContextManager] = None
-    playwright: Optional[AsyncPlaywright] = None
-
     def __init__(self, crawler: Crawler) -> None:
         super().__init__(settings=crawler.settings, crawler=crawler)
         verify_installed_reactor("twisted.internet.asyncioreactor.AsyncioSelectorReactor")
@@ -298,10 +328,8 @@ class ScrapyPlaywrightDownloadHandler(HTTPDownloadHandler):
         if hasattr(self, "browser"):
             logger.info("Closing browser")
             await self.browser.close()
-        if self.playwright_context_manager:
-            await self.playwright_context_manager.__aexit__()
-        if self.playwright:
-            await self.playwright.stop()
+        await self.playwright_context_manager.__aexit__()
+        await self.playwright.stop()
 
     def download_request(self, request: Request, spider: Spider) -> Deferred:
         if request.meta.get("playwright"):
@@ -349,10 +377,8 @@ class ScrapyPlaywrightDownloadHandler(HTTPDownloadHandler):
                         "spider": spider,
                         "context_name": context_name,
                         "scrapy_request_url": request.url,
-                        "scrapy_request_method": request.method,
-                        "exception": ex,
-                    },
-                    exc_info=True,
+                        "scrapy_request_method": request.method
+                    }
                 )
                 await page.close()
                 self.stats.inc_value("playwright/page_count/closed")

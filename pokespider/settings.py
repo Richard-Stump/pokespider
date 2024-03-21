@@ -61,7 +61,7 @@ DEFAULT_REQUEST_HEADERS = {
 #    "pokespider.middlewares.PokespiderDownloaderMiddleware": 543,
 #}
 DOWNLOADER_MIDDLEWARES = {
-    'scrapy_selenium.SeleniumMiddleware': 800
+    #'scrapy_selenium.SeleniumMiddleware': 800
 }
 
 # Enable or disable extensions
@@ -69,6 +69,10 @@ DOWNLOADER_MIDDLEWARES = {
 #EXTENSIONS = {
 #    "scrapy.extensions.telnet.TelnetConsole": None,
 #}
+EXTENSIONS = {
+    "scrapy.extensions.memusage.MemoryUsage": None,
+    "scrapy_playwright.memusage.ScrapyPlaywrightMemoryUsageExtension": 0,
+}
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
@@ -120,6 +124,6 @@ LOG_LEVEL = 'INFO'
 
 PLAYWRIGHT_BROWSER_TYPE = "firefox"
 PLAYWRIGHT_LAUNCH_OPTIONS = {
-    "headless": False,
+    "headless": True,
     "timeout":  60 * 1000,     # 60 seconds
 }
