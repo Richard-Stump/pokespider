@@ -1,3 +1,11 @@
-.venv
-.venv_w
-__pycache__
+
+# Python virtual environment folders. Add any others here.
+.venv/
+.venv_w/
+
+# Python specific files
+__pycache__/
+
+# Web scraper output
+out/
+

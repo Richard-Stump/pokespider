@@ -7,10 +7,6 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-
-import sys
-import asyncio
-
 BOT_NAME = "pokespider"
 
 SPIDER_MODULES = ["pokespider.spiders"]
@@ -20,12 +16,12 @@ NEWSPIDER_MODULE = "pokespider.spiders"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "pokespider (+http://www.yourdomain.com)"
 
-# Obey robots.txt rules
+# Ignore robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 1
-CONCURRENT_ITEMS = 1
+CONCURRENT_REQUESTS = 16
+CONCURRENT_ITEMS = 16
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -46,7 +42,7 @@ COOKIES_ENABLED = True
 DEFAULT_REQUEST_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
-    "Connection": "keep-alive",
+    "Connection": "keep-alive",     
 }
 
 # Enable or disable spider middlewares
@@ -60,15 +56,9 @@ DEFAULT_REQUEST_HEADERS = {
 #DOWNLOADER_MIDDLEWARES = {
 #    "pokespider.middlewares.PokespiderDownloaderMiddleware": 543,
 #}
-DOWNLOADER_MIDDLEWARES = {
-    #'scrapy_selenium.SeleniumMiddleware': 800
-}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    "scrapy.extensions.telnet.TelnetConsole": None,
-#}
 EXTENSIONS = {
     "scrapy.extensions.memusage.MemoryUsage": None,
     "scrapy_playwright.memusage.ScrapyPlaywrightMemoryUsageExtension": 0,
@@ -106,24 +96,35 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
+# Use playwright for 
 DOWNLOAD_HANDLERS = {
     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
 }
 
-# SELENIUM_DRIVER_NAME = 'firefox'
-# SELENIUM_DRIVER_EXECUTABLE_PATH = '.\geckodriver.exe'
-# SELENIUM_DRIVER_ARGUMENTS = [
-#     '-headless',
-# ]
-
-
-DOWNLOAD_TIMEOUT = 10
+# Give up downloading a resource after 60 seconds
+DOWNLOAD_TIMEOUT = 60
 
 LOG_LEVEL = 'INFO'
 
+# Use firefox in headless mode, with a 60 second timeout
 PLAYWRIGHT_BROWSER_TYPE = "firefox"
 PLAYWRIGHT_LAUNCH_OPTIONS = {
     "headless": True,
     "timeout":  60 * 1000,     # 60 seconds
 }
+
+# Whether or not to use the set selector window. You can turn this off if you 
+# decide you want to hardcode the sets in the DEFAULT_SET_LIST setting below.
+USE_SET_SELECTION_WINDOW = True
+
+# List of sets to scrape when the set selector window is not being used. These
+# should match the exact text that the set selector window would use. 
+DEFAULT_SET_LIST = [
+]
+
+EXPORT_PATH_BASE = "./out"
+
+EXPORT_PATH_WITH_DATE = True
+
+EXPORT_PATH_NESTED = True
