@@ -1,7 +1,8 @@
 #===============================================================================
 # pipelines.py - Pipelines that items pass through after being scraped. 
 #
-#
+# This file currently only implements a pipeline that sorts items based on the
+# card set they are from, and exports each set to a separate CSV
 #===============================================================================
 
 
@@ -52,18 +53,32 @@ class PokespiderPipeline:
             csv_file.close()
 
     def open_csv(self, set_name, spider):
+        """
+        Opens a CSV file based on the passed set_name
+
+        Parameters
+        ----------
+        self : PokespiderPipeline
+            The PokespiderPipeline that this method is being called on.
+        set_name : str
+            The name of the card set to open the CSV for.
+        spider : Scrapy.Spider
+            The spider object that this pipeline is being run on. Used to fetch
+            the settings 
+        """
+
         settings = spider.settings
 
-        output_dir = self.setEXPORT_PATH_BASE
+        output_dir = settings.get("EXPORT_PATH_BASE")
         
         if settings.getbool("EXPORT_PATH_WITH_DATE"):
-            date_string = self.open_date_time.strftime("%d_%m_%Y")
+            date_string = self.open_date_time.strftime("%Y_%m_%d")
             output_dir = output_dir + f"/{date_string}/"
 
         if not os.path.exists(output_dir):
             os.makedirs(output_dir, exist_ok=True)
 
-        file_path = f"{output_dir}{set_name}"
+        file_path = f"{output_dir}{set_name}.csv"
 
         return open(file_path, "wb")
 
@@ -84,19 +99,19 @@ class PokespiderPipeline:
         adapater = ItemAdapter(item)
         series = adapater['card_series']
 
-        #
+        # If there is no exporter for this card set, open one. 
         if series not in self.series_to_exporter:
             csv_file = self.open_csv(series, spider)
             exporter = CsvItemExporter(csv_file, export_empty_fields = True)
             exporter.fields_to_export = {
                 "card_order":           "Card Number",
                 "card_name":            "Card Name",
-                "has_normals":          "Norms",
+                "has_normals":          "N",
+                "has_foils":            "F",
                 "low_price":            "Low Price",
                 "high_price":           "High Price",
                 "market_price":         "Normal Market Price",
                 "median_price":         "Normal Median Price",
-                "low_price_foils":      "Foil Low Price",
                 "foil_market_price":    "Foil Market Price",
                 "foil_median_price":    "Foil Median Price",
                 "first_url":            "URL",
@@ -110,6 +125,20 @@ class PokespiderPipeline:
         return self.series_to_exporter[series]
 
     def process_item(self, item, spider):
+        """
+        Processes an item. Exports the items to different CSV based on the set
+        name. 
+
+        Parameters
+        ----------
+        self : PokespiderPipeline
+            The PokespiderPipeline that this method is being called on
+        item : PokespiderItem
+            The item to process
+        spider : PokespiderItem
+            The item that we want the exporter for 
+        """
+        
         print(f"\n\n\n\n\n\n PROCESSING ITEM!!!!!!")
         
         print(f"    url    = {item['first_url']}")

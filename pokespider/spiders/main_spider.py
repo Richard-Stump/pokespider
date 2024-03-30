@@ -56,7 +56,8 @@ class SelectionWindow:
         checkbox = event.GetEventObject()
         checkbox_id = checkbox.GetId()   
         checked = checkbox.IsChecked()
-        print(f"SELECTING ITEM: id={checkbox_id}, checked={checked}")  
+
+        print(f"User modified item selection: id={checkbox_id}, checked={checked}")
         
         self.selection_dict[checkbox_id][1] = checked
 
@@ -92,9 +93,7 @@ class MainSpider(Spider):
 
         selected_items =  window.get_selection()
 
-        print("\n\n Selected Items:")
-        print(selected_items)
-        print("\n\n")
+        self.log(f"Selected Items: \n{selected_items}\n", level=logging.INFO)
 
         return selected_items
 
@@ -120,13 +119,15 @@ class MainSpider(Spider):
         """
 
         working_str = set_name.replace(":", "")
+        working_str = working_str.replace("(", "")
+        working_str = working_str.replace(")", "")
         working_str = working_str.replace("'", "")
         working_str = working_str.replace(" - ", " ")
         working_str = working_str.replace("&", "and")
         working_str = working_str.lower()
         working_str = working_str.replace(" ", "-")
         url_param = f"setName={working_str}"
-        
+        # TODO: Replace parenthesis
         return url_param
 
     def parse_set_selector(self, response):
@@ -155,7 +156,7 @@ class MainSpider(Spider):
                 if item not in site_set_names:
                     message = f"Set {item} does not exist on TCGPlayer.com!" + \
                         "Skipping"
-                    self.log(message, level = logging.DEBUG)
+                    self.log(message, level = logging.WARNING)
                 else:
                     selected_sets.append(item)
         else:
@@ -187,7 +188,7 @@ class MainSpider(Spider):
 
         card_set = response.meta["card_set"]
 
-        self.log(f"Beginning parse of search page for set '{card_set}': {response.url}")
+        self.log(f"Beginning parse of search page for set '{card_set}': {response.url}", level=logging.INFO)
 
         # Find each of the search result panels in the page and parse them.
         search_results = response.css(".search-result").getall()
@@ -204,9 +205,10 @@ class MainSpider(Spider):
         # If we have a url from the next-page button, parse it. Otherwise, we
         # know that we have reached the last search page and can finish.
         if next_page_url is not None:
-            yield self.request_search_page(next_page_url, response)
+            meta = {"card_set": card_set}
+            yield self.request_search_page(next_page_url, response, meta=meta)
         else:
-            self.log(f"Done parsing card set '{card_set}'")
+            self.log(f"Done parsing card set '{card_set}'", level=logging.INFO)
 
     def parse_search_result(self, search_result_body):
         """
@@ -227,7 +229,8 @@ class MainSpider(Spider):
             .replace(": ", " - ")
 
         rarity_spans = selector.css(".product-card__rarity span")
-        print(f"    rarity_spans: {rarity_spans}")
+
+        self.log(f"parse_search_result:\n    rarity_spans: {rarity_spans}")
 
         card_rarity = None
 
@@ -257,13 +260,6 @@ class MainSpider(Spider):
         market_price = selector.css(".product-card__market-price--value::text").get()
 
         first_url = selector.css("a::attr(href)").get()
-        print(f"    card_series:    {card_series}")
-        print(f"    card_rarity:    {card_rarity}")
-        print(f"    card_number:    {card_number}")
-        print(f"    card_name:      {card_name}")
-        print(f"    minimum_price:  {minimum_price}")
-        print(f"    market_price:   {market_price}")
-        print(f"    first_url:      {first_url}")
 
         return PokespiderItem(
             first_url = first_url,
@@ -296,9 +292,8 @@ class MainSpider(Spider):
         
         item = response.meta['wip_item']
 
-        print(f"\n\n PARSING FIRST DETAILS PAGE For: {item['first_url']}")
+        self.log(f"Parsing first details page for {item['first_url']}", level = logging.INFO)
         
-        print(f"    Fetching normal/holo prices")
         headers = response.css(".price-points__header__price *::text").getall()
 
         headers = [h.strip() for h in headers]
@@ -308,22 +303,28 @@ class MainSpider(Spider):
         item['has_normals'] = 'X' if has_normal_prices else None
         item['has_foils'] = 'X' if has_foil_prices else None
 
-        if (not has_normal_prices) and has_foil_prices:
-            item['foil_low_price'] = item['market_price']
-            item['foil_market_price'] = item['market_price']
-            item['low_price'] = None
-            item['market_price'] = None
-
-        elif has_normal_prices and has_foil_prices:
-            prices = response.css(".price-points .price::text").getall()
-
-            item['market_price'] = prices[0]
+        # Depending on whether this card has holofoils, normal cards or both,
+        # we need to scrape and store the data slightly differently
+        prices = response.css(".price-points .price::text").getall()
+        if has_normal_prices and has_foil_prices:
+            item['market_price'] = prices[0]    
             item['foil_market_price'] = prices[1]
             item['median_price'] = prices[4]
             item['foil_median_price'] = prices[5]
+        elif has_normal_prices:
+            item['market_price'] = prices[0]
+            item['median_price'] = prices[2]
+        elif has_foil_prices:
+            # This card has no normal cards, so we need to clear the normal
+            # prices we scraped. 
+            item['market_price'] = None
+            item['median_price'] = None
+            item['foil_market_price'] = prices[0]
+            item['foil_median_price'] = prices[2]
 
         next_url = response.css('.tcg-pagination__pages a::attr(href)').getall()[-1]
-        print(f"\n\n DONE PARSING FIRST DETAILS PAGE")
+
+        self.log(f"Done Parsing First Details Page for {item['first_url']}", level = logging.INFO)
 
         yield self.request_last_details_page(next_url, response, item)
 
@@ -341,11 +342,13 @@ class MainSpider(Spider):
 
         item = response.meta['wip_item']
 
-        print(f"\n\n  PARSING LAST DETAILS PAGE")
+        self.log(f"Parsing last details page for {item['first_url']}", level = logging.INFO)
         
         listing_prices = response.css(".listing-item__price::text").getall();
         
         item['high_price'] = listing_prices[-1]
+        
+        self.log(f"Done parsing last details page for {item['first_url']}", level = logging.INFO)
 
         yield item
 
@@ -401,10 +404,31 @@ class MainSpider(Spider):
             return url
 
         new_url = response.urljoin(url)
-        print(f"\n\nOriginal Url: {url}\nNew Url:    {new_url}")
         return new_url
     
     def request_set_selector(self, url, response = None, meta = None):
+        """
+        Requests a search page with a wait for the set selector to appear. 
+        Handles whatever middleware-specific details are necessary
+
+        Parameters
+        ----------
+        self : MainSpider
+            Reference to the MainSpider object this method is being called for.
+        url : str
+            The url to request.
+        response : Scrapy.Response
+            The response that the URL was parsed from.
+        meta : dict
+            A dictionary that will be attached to the request and response, and 
+            used by middlewares. 
+
+        Returns
+        -------
+        Scrapy.Request
+            A request to the passed URL with the passed meta data, and middleware
+            specific data to wait for the set selector. 
+        """
         if meta is None:
             meta = {}
 
@@ -413,14 +437,40 @@ class MainSpider(Spider):
             PageMethod("wait_for_selector", "[data-testid=searchFilterSet]")
         ]
         
+        new_url = self.get_absolute_url(url, response)
+        self.log(f"Requesting set selector: {new_url}", level=logging.INFO)
+
         return Request(
-            url = self.get_absolute_url(url, response),
+            url = new_url,
             callback = self.parse_set_selector,
             errback = self.error_callback,
             meta = meta
         )
 
     def request_search_page(self, url, response = None, meta = None):
+        """
+        Requests a search page with a wait for the search result cards to appear.
+        Handles whatever middleware-specific details are necessary.
+
+        Parameters
+        ----------
+        self : MainSpider
+            Reference to the MainSpider object this method is being called for.
+        url : str
+            The url to request.
+        response : Scrapy.Response
+            The response that the URL was parsed from.
+        meta : dict
+            A dictionary that will be attached to the request and response, and 
+            used by middlewares. 
+
+        Returns
+        -------
+        Scrapy.Request
+            A request to the passed URL with the passed meta data, and middleware
+            specific data to wait for the search cards.  
+        """
+
         if meta is None:
             meta = {}
 
@@ -429,14 +479,39 @@ class MainSpider(Spider):
             PageMethod("wait_for_selector", ".search-results")
         ]
 
+        new_url = self.get_absolute_url(url, response)
+
+        self.log(f"Requesting search page {new_url}", level=logging.INFO)
         return Request(
-            url = self.get_absolute_url(url, response),
+            url = new_url,
             callback = self.parse_search_page,
             errback = self.error_callback,
             meta = meta
         )
     
     def request_first_details_page(self, url, response, item, meta = None):
+        """
+        Requests a cards initial details page with a wait for necessary data to 
+        appear. Handles whatever middleware-specific details are necessary.
+
+        Parameters
+        ----------
+        self : MainSpider
+            Reference to the MainSpider object this method is being called for.
+        url : str
+            The url to request.
+        response : Scrapy.Response
+            The response that the URL was parsed from.
+        meta : dict
+            A dictionary that will be attached to the request and response, and 
+            used by middlewares. 
+
+        Returns
+        -------
+        Scrapy.Request
+            A request to the passed URL with the passed meta data, and middleware
+            specific data to wait for the required data. 
+        """
         
         if meta is None:
             meta = {}
@@ -449,14 +524,40 @@ class MainSpider(Spider):
             PageMethod("wait_for_selector", ".tcg-pagination__pages")
         ]
 
+        new_url = self.get_absolute_url(url, response)
+
+        self.log(f"Requesting first details page: {new_url}", level=logging.INFO)
         return Request(
-            url = self.get_absolute_url(url, response),
+            url = new_url,
             callback = self.parse_first_details_page,
             errback = self.error_callback,
             meta = meta,
         )
     
     def request_last_details_page(self, url, response, item, meta = None):
+        """
+        Requests a card's last details page with a wait for necessary data to 
+        appear. Handles whatever middleware-specific details are necessary.
+
+        Parameters
+        ----------
+        self : MainSpider
+            Reference to the MainSpider object this method is being called for.
+        url : str
+            The url to request.
+        response : Scrapy.Response
+            The response that the URL was parsed from.
+        meta : dict
+            A dictionary that will be attached to the request and response, and 
+            used by middlewares. 
+
+        Returns
+        -------
+        Scrapy.Request
+            A request to the passed URL with the passed meta data, and middleware
+            specific data to wait for the required data. 
+        """
+
         if meta is None:
             meta = {}
 
@@ -467,8 +568,11 @@ class MainSpider(Spider):
             PageMethod("wait_for_selector", ".price-points"),
         ]
         
+        new_url = self.get_absolute_url(url, response)
+
+        self.log(f"Requesting first details page: {new_url}", level=logging.INFO)
         return Request(
-            url = self.get_absolute_url(url, response),
+            url = new_url,
             callback = self.parse_last_details_page,
             errback = self.error_callback,
             meta = meta,

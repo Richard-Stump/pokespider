@@ -37,7 +37,7 @@ A web crawler designed to scrape pokemon card prices from [TCGPlayer.com](https:
     scrapy crawl 'main`
     ```
 3) A window will pop up with a list of sets that can be scrapped. Check the ones that you want and then close the window. 
-4) Wait.
+4) Wait and eventually it should complete. 
 
 ## Other Notes:
 
@@ -54,5 +54,5 @@ A web crawler designed to scrape pokemon card prices from [TCGPlayer.com](https:
 |------------|-------------|-------------|-------|
 | scrapy        | 2.11.0    | Framework that orchestrates the scraping process and provides a CLI tool for running the scaper. |
 | playwright    | 1.15      | Runs a headless browser that downloads dynamic content. |
-| scrapy-playwright | Special | Implements a Scrapy download handler that lets scrapy download pages using playwright. | This project uses a [fork of scrapy-playwright](https://github.com/sanzenwin/scrapy-playwright/tree/supporting_for_windows) that lets it run on Windows, rather than just Linux. 
+| scrapy-playwright | Special | Implements a Scrapy download handler that lets scrapy download pages using playwright. | This project uses a [fork of scrapy-playwright](https://github.com/sanzenwin/scrapy-playwright/tree/supporting_for_windows) that lets it run on Windows, rather than just Linux. This is included in source form in this project rather than as a submodule 
 | wxPython      | 4.2.1     | Used to implement the set selector window |
